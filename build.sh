@@ -2,5 +2,5 @@
 
 set -e
 
-docker run mono mono --version
+./docker-build.sh
 docker-compose build
