@@ -2,4 +2,4 @@
 
 set -e
 
-docker run mono mono --version
+docker run -v $PWD:/backend mono mono --version
