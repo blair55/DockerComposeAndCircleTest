@@ -2,7 +2,7 @@
 
 open Fake
 
-let buildDir  = "../build/"
+let buildDir  = "./build/"
 
 Target "Clean" (fun _ ->
     CleanDirs [buildDir])

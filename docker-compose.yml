@@ -1,6 +1,23 @@
 version: '2'
 services:
-  
+
+  mymonoproj:
+    image: mymonoproj
+    command: mono MyMonoProj.exe sup
+    volumes:
+      - ./MyMonoProj/build:/build
+    build:
+      context: ./MyMonoProj
+      dockerfile: Dockerfile
+      args:
+        - VERSION
+    ports:
+      - "9000:9000"
+    links:
+      - mysql
+      - sqs
+      - redis
+
   mysql:
     command: --sql-mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
     build:
