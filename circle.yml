@@ -10,7 +10,7 @@ machine:
 
 dependencies:
   override:
-    - docker run -v mono --version
+    - docker run mono mono --version
     - docker-compose build
 
 test:
