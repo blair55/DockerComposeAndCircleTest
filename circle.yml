@@ -5,8 +5,8 @@ machine:
     - pip install docker-compose==1.10.0
 #   node:
 #     version: 7
-#   services:
-#     - docker
+  services:
+    - docker
 
 dependencies:
   override:
