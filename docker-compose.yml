@@ -9,3 +9,9 @@ services:
     environment:
       - MYSQL_DATABASE=customerdata
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+
+  redis:
+    image: redis:latest
+
+  sqs:
+    image: airdock/fake-sqs
