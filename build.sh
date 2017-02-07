@@ -2,5 +2,5 @@
 
 set -e
 
-(cd ./MyMonoProj && ./docker-build.sh compile)
+(cd ./backend && ./docker-build.sh compile)
 docker-compose build

@@ -2,12 +2,12 @@ version: '2'
 services:
 
   mymonoproj:
-    image: mymonoproj
+    image: backend
     command: mono MyMonoProj.exe sup
     volumes:
-      - ./MyMonoProj/build:/build
+      - ./backend/build:/build
     build:
-      context: ./MyMonoProj
+      context: ./backend
       dockerfile: Dockerfile
       args:
         - VERSION
